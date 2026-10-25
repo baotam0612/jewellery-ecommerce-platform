@@ -1,6 +1,6 @@
 # Admin frontend
 
-Ứng dụng quản trị React/Vite của ProjectLTWeb. Cài dependencies tại thư mục `frontend`.
+Ứng dụng quản trị React/Vite của Jewellery Ecommerce Platform. Cài dependencies tại thư mục `frontend`.
 
 ```powershell
 cd frontend

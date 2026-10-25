@@ -9,10 +9,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.jewellery</groupId>
-	<artifactId>ProjWEB</artifactId>
+	<artifactId>jewellery-ecommerce-platform</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>ProjWEB</name>
-	<description>Demo project for Spring Boot</description>
+	<name>jewellery-ecommerce-platform</name>
+	<description>Jewellery ecommerce platform</description>
 	<url/>
 	<licenses>
 		<license/>

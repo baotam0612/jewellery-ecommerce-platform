@@ -1,4 +1,4 @@
-# ProjectLTWeb
+# Jewellery Ecommerce Platform
 
 Ứng dụng gồm backend Spring Boot và hai frontend React dùng chung dependencies, cấu hình Vite và `node_modules`, chạy cùng một cổng.
 
@@ -40,6 +40,18 @@ mvn spring-boot:run
 ```
 
 Cấu hình riêng cho máy phát triển có thể đặt trong `backend/application-local.properties`; file này được tự nạp khi chạy từ thư mục gốc hoặc thư mục `backend` và được loại khỏi Git. Khóa JWT local phải là chuỗi Base64 của ít nhất 32 byte ngẫu nhiên; không đưa khóa vào repository. Biến `APP_JWT_SECRET` được ưu tiên khi cấu hình local sử dụng `${APP_JWT_SECRET:...}`.
+
+Nếu chưa có khóa JWT, tạo từ thư mục gốc bằng PowerShell (chạy một lần):
+
+```powershell
+$bytes = New-Object byte[] 32
+$rng = [System.Security.Cryptography.RandomNumberGenerator]::Create()
+try { $rng.GetBytes($bytes) } finally { $rng.Dispose() }
+$key = [Convert]::ToBase64String($bytes)
+Set-Content backend/application-local.properties "app.jwt.secret=`${APP_JWT_SECRET:$key}"
+```
+
+Giữ nguyên khóa này giữa các lần chạy; nếu thay khóa, JWT đã cấp trước đó sẽ hết hiệu lực và cần đăng nhập lại.
 
 Nếu cấu hình local dùng `app.admin.password=${APP_ADMIN_PASSWORD:}`, backend bỏ qua bước tạo admin khi biến này chưa được đặt. Để bật bước tạo admin, đặt `APP_ADMIN_PASSWORD` dài ít nhất 12 ký tự trước khi chạy.
 

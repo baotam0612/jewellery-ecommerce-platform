@@ -1,3 +1,4 @@
-com\jewellery\ProjWEB\RegistrationTest.class
-com\jewellery\ProjWEB\VerificationResendIntegrationTest.class
-com\jewellery\ProjWEB\AdminPaginationInventoryTest.class
+com\jewellery\ecommerce\RegistrationTest.class
+com\jewellery\ecommerce\JewelleryEcommerceApplicationTests.class
+com\jewellery\ecommerce\AdminPaginationInventoryTest.class
+com\jewellery\ecommerce\VerificationResendIntegrationTest.class
